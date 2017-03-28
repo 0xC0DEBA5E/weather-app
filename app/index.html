@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Notes</title>
+    <title>Wetter</title>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script>var chart = require('chart.js');</script>
+    <script>var moment = require('moment'); moment.locale("de");</script>
 </head>
 <body>
-<h1>Notes</h1>
+<h1>Wetter</h1>
+<script>
 
-<button>Add Note</button>
-<div id="notes">
-</div>
+    function fetch(zipCode) {
+        let jsonurl = "http://api.openweathermap.org/data/2.5/forecast?zip=" + zipCode + ",de&APPID=c314e4b540eac4e88cee00e53b7bf99f";
+        window.jQuery.get(jsonurl).then(
+            (data) => {
+                console.log(data);
+                createChart(data);
+            },
+            (error) => {
+                console.error(error);
+            }
+        );
+    }
 
+    function createChart(weatherData) {
+        let tempList = weatherData.list.map((item) => { // Return List with temperatures in Celsius.
+            let temp = item.main.temp - 273.15; // Convert Kelvin to Celsius.
+            return temp.toFixed(0);
+        });
+
+        let timeLabels = weatherData.list.map(
+            (item, index) => {
+                let label = '';
+
+                //if (index % 3 == 0)
+                    label = moment.unix(item.dt).calendar();
+
+                return label;
+            }
+        );
+
+        let tempCanvas = window.$('#tempCanvas');
+        let tempChart = new Chart(tempCanvas, {
+            type: 'line',
+            data: {
+                labels: timeLabels,
+                datasets: [
+                    {
+                        label: 'Temperatur',
+                        data: tempList,
+                        backgroundColor: "rgba(255, 153, 0, 0.6)"
+                    }
+                ]
+            }
+        });
+
+    }
+    window.$(document).ready(function () {
+    })
+
+</script>
+<label>PLZ</label>
+<input type="number" id="plz" value="76131">
+<button onclick="fetch(window.$('#plz').val())">Laden</button>
+<canvas id="tempCanvas" width="400" height="100"></canvas>
 </body>
 </html>
