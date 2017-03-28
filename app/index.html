@@ -4,17 +4,47 @@
     <title>Wetter</title>
     <script>window.$ = window.jQuery = require('jquery');</script>
     <script>var chart = require('chart.js');</script>
-    <script>var moment = require('moment'); moment.locale("de");</script>
+    <script>var moment = require('moment');
+    moment.locale("de");</script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #header {
+            padding: 15px;
+            background-repeat:no-repeat;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0))), url('bg.jpg');
+
+            background-blend-mode: soft-light;
+            height: 100%;
+            color: #ff8c00;
+            font-family: "Droid Sans";
+        }
+        #input-group {
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-<h1>Wetter</h1>
+<header id="header">
+    <h1 id="heading">Wetter</h1>
+    <div id="input-group">
+        <label>PLZ</label>
+        <input type="number" id="plz" value="76131">
+        <button onclick="fetch(window.$('#plz').val())">Laden</button>
+    </div>
+</header>
 <script>
 
     function fetch(zipCode) {
         let jsonurl = "http://api.openweathermap.org/data/2.5/forecast?zip=" + zipCode + ",de&APPID=c314e4b540eac4e88cee00e53b7bf99f";
         window.jQuery.get(jsonurl).then(
             (data) => {
-                console.log(data);
+                console.log(data.city.name);
+                if (data.city.name)
+                    window.$('#heading').text("Wetter in " + data.city.name);
                 createChart(data);
             },
             (error) => {
@@ -34,7 +64,7 @@
                 let label = '';
 
                 //if (index % 3 == 0)
-                    label = moment.unix(item.dt).calendar();
+                label = moment.unix(item.dt).calendar();
 
                 return label;
             }
@@ -60,9 +90,6 @@
     })
 
 </script>
-<label>PLZ</label>
-<input type="number" id="plz" value="76131">
-<button onclick="fetch(window.$('#plz').val())">Laden</button>
 <canvas id="tempCanvas" width="400" height="100"></canvas>
 </body>
 </html>
