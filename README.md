@@ -1,5 +1,6 @@
 # weather-app
-Electron Weather-App
+Weather-App for demonstration of [electron's](https://github.com/electron/electron) features. This Project was 
+created for the _Benutzungsoberflächen-Labor_ at Hochschule Karlsruhe.
 
 # Project Setup
 After cloning the repository, run `npm install` to download the dependencies.
