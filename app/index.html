@@ -6,6 +6,16 @@
     <script>var chart = require('chart.js');</script>
     <script>var moment = require('moment');
     moment.locale("de");</script>
+    <script src="weather-app.js"></script>
+    <script>
+        var weatherApp = new WeatherApp();
+
+        window.$(document).ready(function () {
+            window.$('load-btn').on('click', function () {
+                weatherApp.fetch(window.$('#plz').val());
+            });
+        });
+    </script>
     <style>
         * {
             padding: 0;
@@ -14,16 +24,29 @@
 
         #header {
             padding: 15px;
-            background-repeat:no-repeat;
-            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0))), url('bg.jpg');
+            background-repeat: no-repeat;
+            background-image: url('bg.jpg');
 
             background-blend-mode: soft-light;
             height: 100%;
             color: #ff8c00;
             font-family: "Droid Sans";
         }
+
         #input-group {
             margin-top: 15px;
+        }
+
+        #load-btn {
+            background-color: transparent;
+            border-radius: 10%;
+            width: 50px;
+            border-color: rgba(139, 210, 255, 0.3);
+            color: darkorange;
+        }
+
+        #plz {
+            width: 52px;
         }
     </style>
 </head>
@@ -33,63 +56,9 @@
     <div id="input-group">
         <label>PLZ</label>
         <input type="number" id="plz" value="76131">
-        <button onclick="fetch(window.$('#plz').val())">Laden</button>
+        <button id="load-btn">Laden</button>
     </div>
 </header>
-<script>
-
-    function fetch(zipCode) {
-        let jsonurl = "http://api.openweathermap.org/data/2.5/forecast?zip=" + zipCode + ",de&APPID=c314e4b540eac4e88cee00e53b7bf99f";
-        window.jQuery.get(jsonurl).then(
-            (data) => {
-                console.log(data.city.name);
-                if (data.city.name)
-                    window.$('#heading').text("Wetter in " + data.city.name);
-                createChart(data);
-            },
-            (error) => {
-                console.error(error);
-            }
-        );
-    }
-
-    function createChart(weatherData) {
-        let tempList = weatherData.list.map((item) => { // Return List with temperatures in Celsius.
-            let temp = item.main.temp - 273.15; // Convert Kelvin to Celsius.
-            return temp.toFixed(0);
-        });
-
-        let timeLabels = weatherData.list.map(
-            (item, index) => {
-                let label = '';
-
-                //if (index % 3 == 0)
-                label = moment.unix(item.dt).calendar();
-
-                return label;
-            }
-        );
-
-        let tempCanvas = window.$('#tempCanvas');
-        let tempChart = new Chart(tempCanvas, {
-            type: 'line',
-            data: {
-                labels: timeLabels,
-                datasets: [
-                    {
-                        label: 'Temperatur',
-                        data: tempList,
-                        backgroundColor: "rgba(255, 153, 0, 0.6)"
-                    }
-                ]
-            }
-        });
-
-    }
-    window.$(document).ready(function () {
-    })
-
-</script>
 <canvas id="tempCanvas" width="400" height="100"></canvas>
 </body>
 </html>

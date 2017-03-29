@@ -3,8 +3,6 @@ const path = require('path')
 const url = require('url')
 const client = require('electron-connect').client;
 
-//api: api.openweathermap.org/data/2.5/forecast?zip=76131,de&APPID=c314e4b540eac4e88cee00e53b7bf99f
-
 let win
 
 function createWindow() {
