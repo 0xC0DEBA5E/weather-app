@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8"/>
     <title>Wetter</title>
     <script>window.$ = window.jQuery = require('jquery');</script>
     <script>var chart = require('chart.js');</script>
@@ -13,17 +14,31 @@
         }
 
         #header {
-            padding: 15px;
-            background-repeat:no-repeat;
-            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0))), url('bg.jpg');
+            padding: 15px 30px 15px 15px;
+            background-repeat: no-repeat;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0))), url('bg.jpg');
 
             background-blend-mode: soft-light;
             height: 100%;
             color: #ff8c00;
             font-family: "Droid Sans";
         }
+
         #input-group {
             margin-top: 15px;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            line-height: 1.5em;
+            text-align: center;
+            background: #F7F8FE;
+        }
+        
+        a {
+            color: #ff8c00;
         }
     </style>
 </head>
@@ -91,5 +106,9 @@
 
 </script>
 <canvas id="tempCanvas" width="400" height="100"></canvas>
+
+<div id="footer">
+    <a href="presentation.html" target="_blank">Starte Präsentation</a>
+</div>
 </body>
 </html>

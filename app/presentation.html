@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Presentation</title>
+    <script>var reveal = require('reveal.js')</script>
+
+    <link rel="stylesheet" href="../node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../node_modules/reveal.js/css/theme/white.css">
+    <style>
+        h1, h2, h3, h4, h5, h6, a {
+            color: #ff8c00;
+        }
+    </style>
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '../node_modules/reveal.js/css/print/pdf.css' : '../node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+        <section data-background-color="#D9EAF5">
+            <h2>Gliederung</h2>
+            <ol>
+                <li class="fragment">Electron</li>
+                <li class="fragment">ECMAScript6</li>
+                <li class="fragment">NodeJs</li>
+            </ol>
+        </section>
+        <section data-background-color="#D9EAF5">
+            <h2>Electron</h2>
+            <ul>
+                <li class="fragment">Open Source Library von GitHub</li>
+                <li class="fragment">Desktop-Applikation erstellen mit HTML, CSS, JavaScript</li>
+                <li class="fragment">Applikationen laufen unter Mac, Windows und Linux</li>
+            </ul>
+        </section>
+        <section data-background-color="#D9EAF5">
+            <h2>app Module</h2>
+            <ul>
+                <li class="fragment">Läuft im Main-Prozess</li>
+                <li class="fragment">Verwaltet den Lifecycle der Applikation</li>
+                <li class="fragment">Events können mehrere Parameter entgegenehmen</li>
+                <li class="fragment">Jedes Events gibt unterschiedliche Parameter zurück</li>
+            </ul>
+            <pre class="javascript fragment">
+                <code data-trim>
+const {app} = require('electron')
+app.on('event', (... parameters ...) => {
+    // do something
+})
+                </code>
+            </pre>
+        </section>
+    </div>
+</div>
+<script>
+    reveal.initialize();
+</script>
+</body>
+</html>
