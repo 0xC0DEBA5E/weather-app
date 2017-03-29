@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../node_modules/reveal.js/css/reveal.css">
     <link rel="stylesheet" href="../node_modules/reveal.js/css/theme/white.css">
     <style>
-        h1, h2, h3, h4, h5, h6, a {
+        * {
             color: #ff8c00;
         }
     </style>
@@ -24,6 +24,8 @@
 
 <div class="reveal">
     <div class="slides">
+
+        <!-- New Slide -->
         <section data-background-color="#D9EAF5">
             <h2>Gliederung</h2>
             <ol>
@@ -32,6 +34,9 @@
                 <li class="fragment">NodeJs</li>
             </ol>
         </section>
+
+
+        <!-- New Slide -->
         <section data-background-color="#D9EAF5">
             <h2>Electron</h2>
             <ul>
@@ -40,6 +45,35 @@
                 <li class="fragment">Applikationen laufen unter Mac, Windows und Linux</li>
             </ul>
         </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#D9EAF5">
+            <h2>Electron IPC</h2>
+            <h3>Zwei Arten von Prozessen:</h3>
+            <ul>
+                <li class="fragment">Ein Main-Prozess</li>
+                <li class="fragment">n Renderer-Prozesse</li>
+            </ul>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#D9EAF5">
+            <h2>Electron IPC</h2>
+            <h3>ipcRenderer Module:</h3>
+            Kommunikation vom Renderer- zum Main Prozess
+            <h3>ipcMain Module:</h3>
+            Kommunikation vom Main- zum Renderer-Prozess
+            <pre class="javascript fragment"><code data-trim>
+ipcRenderer.send('asynchronous-message', 'ping')
+
+ipcMain.on('asynchronous-message', (event, arg) => {
+    console.log(arg)  // prints "ping"
+    event.sender.sendSync('synchronous-message', 'pong')
+})
+ipcRenderer.on('synchronous-message', ...</code></pre>
+        </section>
+
+        <!-- New Slide -->
         <section data-background-color="#D9EAF5">
             <h2>app Module</h2>
             <ul>
@@ -56,6 +90,30 @@ app.on('event', (... parameters ...) => {
 })
                 </code>
             </pre>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#D9EAF5">
+            <h2>app Module Events</h2>
+            <ul>
+                <li>ready</li>
+                <li>window-all-closed</li>
+                <li>before-quit</li>
+                <li>open-file</li>
+                <li>browser-window-created</li>
+                <li>...</li>
+            </ul>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#D9EAF5">
+            <h2>BrowserWindow</h2>
+            <ul>
+                <li class="fragment">Läuft im Main-Prozess</li>
+                <li class="fragment">Verwaltet Fensterabhängige Events</li>
+                <li class="fragment">Parent-Child Konzept</li>
+                <li class="fragment">Options erlauben Fensterkonfiguration</li>
+            </ul>
         </section>
     </div>
 </div>
