@@ -16,7 +16,8 @@
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? '../node_modules/reveal.js/css/print/pdf.css' : '../node_modules/reveal.js/css/print/paper.css';
+        link.href = '../node_modules/reveal.js/css/print/pdf.css';
+        // link.href = window.location.search.match(/print-pdf/gi) ? '../node_modules/reveal.js/css/print/pdf.css' : '../node_modules/reveal.js/css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
 </head>
@@ -138,6 +139,33 @@ app.on('event', (... parameters ...) => {
                 <li class="fragment">Superset über JavaScript, welches zu ES3 (optional ES5) transpiliert</li>
                 <li class="fragment">Statische Typisierung</li>
                 <li class="fragment">Interfaces</li>
+            </ul>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#D9EAF5">
+            <h2>NodeJs</h2>
+            <ul>
+                <li class="fragment">JavaScript-Laufzeitumgebung für Server-Anwendungen</li>
+                <li class="fragment">Open Source, cross-plattform</li>
+                <li class="fragment">veröffentlicht 2009 von Ryan Dahl</li>
+                <li class="fragment">benutzt JavaScript-Enginge V8 von Google Chrome</li>
+                <li class="fragment">Anwendungen auch in CoffeeScript, Dart oder TypeScript möglich</li>
+                <li class="fragment">wird u.a. eingesetzt von: IBM, LinkedIn, Microsoft, Netflix, PayPal, SAP, Yahoo, Cisco, ...</li>
+                <li class="fragment">Paketmanager zum Installieren und Verwalten von Modulen</li>
+                <li class="fragment">schreiben eigener Module möglich</li>
+            </ul>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#D9EAF5">
+            <h2>NodeJs</h2>
+            <ul>
+                <li class="fragment">arbeitet standardmäßig mit nur einem Thread</li>
+                <li class="fragment">mit libuv kann zusätzlich Thread-Pool vorgehalten werden</li>
+                <li class="fragment">event-driven-Architektur erlaubt auch ohne Threading hochskalierbare Web Server</li>
+                <li class="fragment">asynchroner I/O</li>
+                <li class="fragment">Funktionen laufen nicht-blockierend (parallel) ab; Callbacks signalisieren, wenn sie fertig oder fehlgeschlagen sind</li>
             </ul>
         </section>
     </div>
