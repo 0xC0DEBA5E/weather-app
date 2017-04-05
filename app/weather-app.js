@@ -1,5 +1,24 @@
 var weatherApp = (function () {
+
+    const remote = require('electron').remote;
+
+        this.onload = function () {
+            remote.getGlobal('cookies').get({name:'zipCode'}, (error, cookies) => {
+                if (error) {
+                    console.log(error);
+                }else if (cookies){ // && cookies[0].value && cookies[0].value != ""
+                    window.$('#plz').val(cookies[0].value);
+                }
+            })
+        }
+
         this.fetchData = function (zipCode) {
+            let myCookie = {url:'http://www.github.com', name: 'zipCode', value: zipCode, session:false, expirationDate:1504992723000};
+            remote.getGlobal('cookies').set(myCookie, (error) => {
+                if (error) {
+                    console.log(error);
+                }
+            });
             let jsonurl = "http://api.openweathermap.org/data/2.5/forecast?zip=" + zipCode + ",de&APPID=c314e4b540eac4e88cee00e53b7bf99f";
             window.jQuery.get(jsonurl).then(
                 (data) => {
@@ -13,6 +32,7 @@ var weatherApp = (function () {
                 }
             );
         };
+
 
         this.createChart = function (weatherData) {
             let tempList = weatherData.list.map((item) => { // Return List with temperatures in Celsius.

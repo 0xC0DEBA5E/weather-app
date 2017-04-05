@@ -1,11 +1,10 @@
-const {app, BrowserWindow, globalShortcut} = require('electron')
+const {app, BrowserWindow, globalShortcut, session} = require('electron')
 const path = require('path')
 const url = require('url')
 const client = require('electron-connect').client;
-
 //api: api.openweathermap.org/data/2.5/forecast?zip=76131,de&APPID=c314e4b540eac4e88cee00e53b7bf99f
 
-let win
+let win;
 
 function createWindow() {
     // Create the browser window.
@@ -37,7 +36,12 @@ function defineGlobalShortcuts() {
     });
 }
 
+function readCookies() {
+    global.cookies = win.webContents.session.cookies;
+}
+
 app.on('ready', createWindow)
+app.on('ready', readCookies)
 app.on('ready', defineGlobalShortcuts)
 
 // Quit when all windows are closed.
