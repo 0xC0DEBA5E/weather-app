@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, globalShortcut} = require('electron')
 const path = require('path')
 const url = require('url')
 const client = require('electron-connect').client;
@@ -31,7 +31,14 @@ function createWindow() {
     client.create(win)
 }
 
+function defineGlobalShortcuts() {
+    globalShortcut.register('CommandOrControl+X', () => {
+        app.quit();
+    });
+}
+
 app.on('ready', createWindow)
+app.on('ready', defineGlobalShortcuts)
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
