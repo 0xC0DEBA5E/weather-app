@@ -48,8 +48,8 @@
       <file leaf-file-name="Exercise-02.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doc/exercise-02/Exercise-02.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="390">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -341,7 +341,7 @@
       <workItem from="1490859986916" duration="1442000" />
       <workItem from="1491232429640" duration="599000" />
       <workItem from="1491402840016" duration="4959000" />
-      <workItem from="1491407814759" duration="1962000" />
+      <workItem from="1491407814759" duration="2020000" />
     </task>
     <task id="LOCAL-00001" summary="feature(reveal.js): add reveal and first few slides.">
       <created>1490802853370</created>
@@ -427,11 +427,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491409694868</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="doc(exercise-02): edit locales section">
+      <created>1491409782010</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1491409782010</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38626000" />
+    <option name="totallyTimeSpent" value="38684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="734" width="1366" height="741" extended-state="6" />
@@ -811,8 +818,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/doc/exercise-02/Exercise-02.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
