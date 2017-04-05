@@ -36,7 +36,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-              <folding />
+              <folding>
+                <marker date="1491409705085" expanded="true" signature="1248:1449" ph="{...}" />
+                <marker date="1491409705085" expanded="true" signature="1254:1381" ph="//..." />
+                <marker date="1491409705085" expanded="true" signature="1421:1447" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,8 +48,8 @@
       <file leaf-file-name="Exercise-02.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doc/exercise-02/Exercise-02.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="193" lean-forward="false" selection-start-line="19" selection-start-column="193" selection-end-line="19" selection-end-column="193" />
+            <state relative-caret-position="375">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -337,7 +341,7 @@
       <workItem from="1490859986916" duration="1442000" />
       <workItem from="1491232429640" duration="599000" />
       <workItem from="1491402840016" duration="4959000" />
-      <workItem from="1491407814759" duration="1872000" />
+      <workItem from="1491407814759" duration="1962000" />
     </task>
     <task id="LOCAL-00001" summary="feature(reveal.js): add reveal and first few slides.">
       <created>1490802853370</created>
@@ -416,11 +420,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491409316134</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="doc(exercise-02): edit locales section">
+      <created>1491409694868</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1491409694868</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38536000" />
+    <option name="totallyTimeSpent" value="38626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="734" width="1366" height="741" extended-state="6" />
@@ -466,7 +477,8 @@
     <MESSAGE value="ref(doc): rename task* to exercise*" />
     <MESSAGE value="doc(exercise-02): add task assignments" />
     <MESSAGE value="doc(exercise-02): add locales section" />
-    <option name="LAST_COMMIT_MESSAGE" value="doc(exercise-02): add locales section" />
+    <MESSAGE value="doc(exercise-02): edit locales section" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc(exercise-02): edit locales section" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -485,7 +497,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding />
+          <folding>
+            <marker date="1491409705085" expanded="true" signature="1248:1449" ph="{...}" />
+            <marker date="1491409705085" expanded="true" signature="1254:1381" ph="//..." />
+            <marker date="1491409705085" expanded="true" signature="1421:1447" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -777,7 +793,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding />
+          <folding>
+            <marker date="1491409705085" expanded="true" signature="1248:1449" ph="{...}" />
+            <marker date="1491409705085" expanded="true" signature="1254:1381" ph="//..." />
+            <marker date="1491409705085" expanded="true" signature="1421:1447" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -791,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/doc/exercise-02/Exercise-02.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="193" lean-forward="false" selection-start-line="19" selection-start-column="193" selection-end-line="19" selection-end-column="193" />
+        <state relative-caret-position="375">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
