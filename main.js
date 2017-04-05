@@ -1,4 +1,4 @@
-const {app, BrowserWindow, globalShortcut, session} = require('electron')
+const {app, BrowserWindow, globalShortcut, dialog, session} = require('electron')
 const path = require('path')
 const url = require('url')
 const client = require('electron-connect').client;
@@ -40,9 +40,14 @@ function readCookies() {
     global.cookies = win.webContents.session.cookies;
 }
 
+function showWelcomeMessage() {
+	dialog.showMessageBox( { type: "info", message: "Willkommen!", buttons: ["OK"] });
+}
+
 app.on('ready', createWindow)
 app.on('ready', readCookies)
 app.on('ready', defineGlobalShortcuts)
+app.on('ready', showWelcomeMessage)
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
