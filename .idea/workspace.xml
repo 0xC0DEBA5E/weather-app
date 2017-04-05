@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bed23bc-c38f-4af7-a37a-eedd7b5c8984" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/exercise-02/Exercise-02.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/task2/Aufgabe2-Doku.md" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/doc/task1/Presentation.pdf" afterPath="$PROJECT_DIR$/doc/exercise-01/Presentation.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/exercise-02/Exercise-02.md" afterPath="$PROJECT_DIR$/doc/exercise-02/Exercise-02.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,21 +41,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Exercise-02.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Exercise-02.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doc/exercise-02/Exercise-02.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+              <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -96,6 +93,7 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/doc/task2/Aufgabe2-Doku.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/doc/exercise-02/Exercise-02.md" />
       </list>
     </option>
   </component>
@@ -339,7 +337,7 @@
       <workItem from="1490859986916" duration="1442000" />
       <workItem from="1491232429640" duration="599000" />
       <workItem from="1491402840016" duration="4959000" />
-      <workItem from="1491407814759" duration="251000" />
+      <workItem from="1491407814759" duration="689000" />
     </task>
     <task id="LOCAL-00001" summary="feature(reveal.js): add reveal and first few slides.">
       <created>1490802853370</created>
@@ -397,11 +395,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491407698406</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ref(doc): rename task* to exercise*">
+      <created>1491408094997</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1491408094997</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36915000" />
+    <option name="totallyTimeSpent" value="37353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="734" width="1366" height="741" extended-state="6" />
@@ -444,7 +449,8 @@
     <MESSAGE value="build(package.json): update electron" />
     <MESSAGE value="doc(task2): add Aufgabe2-Doku.md file" />
     <MESSAGE value="doc(readme): add reference to doc in README" />
-    <option name="LAST_COMMIT_MESSAGE" value="doc(readme): add reference to doc in README" />
+    <MESSAGE value="ref(doc): rename task* to exercise*" />
+    <option name="LAST_COMMIT_MESSAGE" value="ref(doc): rename task* to exercise*" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -759,18 +765,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/exercise-02/Exercise-02.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+        <state relative-caret-position="240">
+          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/doc/exercise-02/Exercise-02.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
