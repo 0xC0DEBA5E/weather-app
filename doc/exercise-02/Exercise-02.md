@@ -11,6 +11,27 @@
 ## Session
 
 ## Dialog
+With the dialog module it is possible to display native system dialogs for opening files, saving files and several kinds of messageboxes. dialog is opened from electron's main process, to use a dialog object in a renderer process, you have to use it with remote.
+
+### Methods of dialog module:
+dialog.showOpenDialog([browserWindow, ]options[, callback])
+- three different types: openFile, openDirectory, multiSelections
+- with filters it is possible to provide file extension filters in the dialog
+
+dialog.showSaveDialog([browserWindow, ]options[, callback])
+
+dialog.showMessageBox([browserWindow, ]options[, callback])
+- with 'type' different icons can be choosen or with 'icon' an own icon can be used.
+
+dialog.showErrorBox(title, content)
+- can be called safely before the ready event the app module emits
+- usually used to report errors in early stage of startup
+
+dialog.showCertificateTrustDialog([browserWindow, ]options, callback) macOS
+
+
+Note: The module name 'dialog' is a bit confusing because you can only use the system file open/save dialogs and messageboxes, but cannot create "dialogs" with text fields and other things.
+For more information, see [the official module documentation](https://github.com/electron/electron/blob/master/docs/api/dialog.md).
 
 ## Locales
 
