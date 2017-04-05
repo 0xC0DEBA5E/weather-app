@@ -44,8 +44,8 @@
       <file leaf-file-name="Exercise-02.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doc/exercise-02/Exercise-02.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+            <state relative-caret-position="285">
+              <caret line="19" column="193" lean-forward="false" selection-start-line="19" selection-start-column="193" selection-end-line="19" selection-end-column="193" />
               <folding />
             </state>
           </provider>
@@ -337,7 +337,7 @@
       <workItem from="1490859986916" duration="1442000" />
       <workItem from="1491232429640" duration="599000" />
       <workItem from="1491402840016" duration="4959000" />
-      <workItem from="1491407814759" duration="1487000" />
+      <workItem from="1491407814759" duration="1872000" />
     </task>
     <task id="LOCAL-00001" summary="feature(reveal.js): add reveal and first few slides.">
       <created>1490802853370</created>
@@ -409,11 +409,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491408523826</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="doc(exercise-02): add locales section">
+      <created>1491409316134</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1491409316134</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38151000" />
+    <option name="totallyTimeSpent" value="38536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="734" width="1366" height="741" extended-state="6" />
@@ -458,7 +465,8 @@
     <MESSAGE value="doc(readme): add reference to doc in README" />
     <MESSAGE value="ref(doc): rename task* to exercise*" />
     <MESSAGE value="doc(exercise-02): add task assignments" />
-    <option name="LAST_COMMIT_MESSAGE" value="doc(exercise-02): add task assignments" />
+    <MESSAGE value="doc(exercise-02): add locales section" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc(exercise-02): add locales section" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -783,8 +791,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/doc/exercise-02/Exercise-02.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        <state relative-caret-position="285">
+          <caret line="19" column="193" lean-forward="false" selection-start-line="19" selection-start-column="193" selection-end-line="19" selection-end-column="193" />
           <folding />
         </state>
       </provider>
