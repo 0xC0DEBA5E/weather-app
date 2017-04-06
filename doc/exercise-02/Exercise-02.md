@@ -9,23 +9,23 @@
 ## Cookies and Session
 
 Electron allows the access to browser sessions, cookies, proxy settings etc. via the `session` module. The current session can be accessed by: `window.webContents.session`.
-The default session of the application can be accessed by: 'Session.defaultSession'.
-This session can be used to call methods like 'getUserAgent', 'setProxy', 'setDownloadPath'.
+The default session of the application can be accessed by: `Session.defaultSession`.
+This session can be used to call methods like `getUserAgent`, `setProxy`, `setDownloadPath`.
 
 Cookies can be accessed by `Session.cookies`
 
-'Cookies.get(filter, callback);'
+`Cookies.get(filter, callback);`
 
-The 'filter' is a JSON object consisting of the following properties: 'url', `name`, `domain`, `path`, `secure`, `session`.
+The `filter` is a JSON object consisting of the following properties: `url`, `name`, `domain`, `path`, `secure`, `session`.
 
-In this case 'session' allows the differentiation between session and persistent cookies.
-The callback possibly consists of 'error's  and an array of 'cookie' objects, which can be used to read a 'name' and a 'value'.
-To set a cookie 'Cookies.set(details, callback)' is used.
-The 'detail' object can consist of the following properties:
-'url' (mandatory), 'name', 'value', 'domain', 'path', 'secure', 'httpOnly', 'expirationDate'
+In this case `session` allows the differentiation between session and persistent cookies.
+The callback possibly consists of `error`s  and an array of `cookie` objects, which can be used to read a `name` and a `value`.
+To set a cookie `Cookies.set(details, callback)` is used.
+The `detail` object can consist of the following properties:
+`url` (mandatory), `name`, `value`, `domain`, `path`, `secure`, `httpOnly`, `expirationDate`
 
-The 'expirationDate' property allows to set the cookie either as a session cookie (by omitting parameters) or as a persistent cookie (the parameter is a UNIX timestamp).
-The 'Callback' consists of possible errors.
+The `expirationDate` property allows to set the cookie either as a session cookie (by omitting parameters) or as a persistent cookie (the parameter is a UNIX timestamp).
+The `Callback` consists of possible errors.`
 
 
 ## Dialog
@@ -39,7 +39,7 @@ dialog.showOpenDialog([browserWindow, ]options[, callback])
 dialog.showSaveDialog([browserWindow, ]options[, callback])
 
 dialog.showMessageBox([browserWindow, ]options[, callback])
-- with 'type' different icons can be choosen or with 'icon' an own icon can be used.
+- with `type` different icons can be choosen or with `icon` an own icon can be used.
 
 dialog.showErrorBox(title, content)
 - can be called safely before the ready event the app module emits
@@ -48,7 +48,7 @@ dialog.showErrorBox(title, content)
 dialog.showCertificateTrustDialog([browserWindow, ]options, callback) macOS
 
 
-Note: The module name 'dialog' is a bit confusing because you can only use the system file open/save dialogs and messageboxes, but cannot create "dialogs" with text fields and other things.
+Note: The module name `dialog` is a bit confusing because you can only use the system file open/save dialogs and messageboxes, but cannot create "dialogs" with text fields and other things.
 For more information, see [the official module documentation](https://github.com/electron/electron/blob/master/docs/api/dialog.md).
 
 ## Locales
