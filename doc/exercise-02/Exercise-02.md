@@ -96,6 +96,8 @@ Accelerators are strings which are used to define keyboard shortcuts. They consi
 - `Up`, `Down`, ...
 - ...
 
+Modifiers and accelerators are combined by the `+` sign.
+
 ### Global Shortcuts
 
 To define a global shortcut first import the `globalShortcut`-module: `const {globalShortcut} = require('electron')`
