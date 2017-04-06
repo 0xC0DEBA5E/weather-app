@@ -30,143 +30,66 @@
         <section data-background-color="#D9EAF5">
             <h2>Gliederung</h2>
             <ol>
-                <li class="fragment">Electron</li>
-                <li class="fragment">ECMAScript6</li>
-                <li class="fragment">NodeJs</li>
+                <li class="fragment">Session & Cookies</li>
+                <li class="fragment">Dialog</li>
+                <li class="fragment">Locales</li>
+                <li class="fragment">Accelerators and Global Shortcuts</li>
             </ol>
         </section>
 
 
         <!-- New Slide -->
         <section data-background-color="#D9EAF5">
-            <h2>Electron</h2>
-            <ul>
-                <li class="fragment">Open Source Library von GitHub</li>
-                <li class="fragment">Desktop-Applikation erstellen mit HTML, CSS, JavaScript</li>
-                <li class="fragment">Applikationen laufen unter Mac, Windows und Linux</li>
-            </ul>
-        </section>
-
-        <!-- New Slide -->
-        <section data-background-color="#D9EAF5">
-            <h2>Electron IPC</h2>
-            <h3>Zwei Arten von Prozessen:</h3>
-            <ul>
-                <li class="fragment">Ein Main-Prozess</li>
-                <li class="fragment">n Renderer-Prozesse</li>
-            </ul>
-        </section>
-
-        <!-- New Slide -->
-        <section data-background-color="#D9EAF5">
-            <h2>Electron IPC</h2>
-            <h3>ipcRenderer Module:</h3>
-            Kommunikation vom Renderer- zum Main Prozess
-            <h3>ipcMain Module:</h3>
-            Kommunikation vom Main- zum Renderer-Prozess
+            <h2>Session & Cookies</h2>
             <pre class="javascript fragment"><code data-trim>
-ipcRenderer.send('asynchronous-message', 'ping')
-
-ipcMain.on('asynchronous-message', (event, arg) => {
-    console.log(arg)  // prints "ping"
-    event.sender.sendSync('synchronous-message', 'pong')
-})
-ipcRenderer.on('synchronous-message', ...</code></pre>
+remote.getGlobal('cookies').get({name:'zipCode'}, (error, cookies) => {
+                if (error) {
+                    console.log(error);
+                } else if (cookies && cookies[0].value
+                    && cookies[0].value != "") {
+                    window.$('#plz').val(cookies[0].value);
+                }
+            })</code></pre>
         </section>
 
         <!-- New Slide -->
         <section data-background-color="#D9EAF5">
-            <h2>app Module</h2>
+            <h2>Dialog</h2>
+            <pre class="javascript fragment"><code data-trim>
+function showWelcomeMessage() {
+	dialog.showMessageBox(
+                {
+                    type: "info",
+                    message: "Willkommen!",
+                    buttons: ["OK"]
+                });
+}</code></pre>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#D9EAF5">
+            <h2>Locales</h2>
+            Spracheinstellung und Einstellung von Nummern- Währungs- und Datumsformat.
+            Beispiele:
             <ul>
-                <li class="fragment">Läuft im Main-Prozess</li>
-                <li class="fragment">Verwaltet den Lifecycle der Applikation</li>
-                <li class="fragment">Events können mehrere Parameter entgegenehmen</li>
-                <li class="fragment">Jedes Events gibt unterschiedliche Parameter zurück</li>
+                <li>de</li>
+                <li>de-DE</li>
+                <li>en</li>
+                <li>en-US</li>
             </ul>
+            <pre class="javascript fragment"><code data-trim>
+app.getLocale()</code></pre>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#D9EAF5">
+            <h2>Accelerators and Global Shortcuts</h2>
             <pre class="javascript fragment">
                 <code data-trim>
-const {app} = require('electron')
-app.on('event', (... parameters ...) => {
-    // do something
-})
-                </code>
+globalShortcut.register('CommandOrControl+X', () => {
+        app.quit();
+    });</code>
             </pre>
-        </section>
-
-        <!-- New Slide -->
-        <section data-background-color="#D9EAF5">
-            <h2>app Module Events</h2>
-            <ul>
-                <li>ready</li>
-                <li>window-all-closed</li>
-                <li>before-quit</li>
-                <li>open-file</li>
-                <li>browser-window-created</li>
-                <li>...</li>
-            </ul>
-        </section>
-
-        <!-- New Slide -->
-        <section data-background-color="#D9EAF5">
-            <h2>BrowserWindow</h2>
-            <ul>
-                <li class="fragment">Läuft im Main-Prozess</li>
-                <li class="fragment">Verwaltet Fensterabhängige Events</li>
-                <li class="fragment">Parent-Child Konzept</li>
-                <li class="fragment">Options erlauben Fensterkonfiguration</li>
-            </ul>
-        </section>
-
-        <!-- New Slide -->
-        <section data-background-color="#D9EAF5">
-            <h2>ECMAScript</h2>
-            <ul>
-                <li class="fragment">standardisierter Sprachkern von JavaScript</li>
-                <li class="fragment">ECMAScript 2015 (ECMAScript 6):</li>
-                <ul class="fragment">
-                    <li>Optionale neue klassenbasierte Objektorientierung als Syntactic Sugar</li>
-                </ul>
-                <li class="fragment">Module</li>
-                <li class="fragment">Und vieles weiteres</li>
-            </ul>
-        </section>
-
-        <!-- New Slide -->
-        <section data-background-color="#D9EAF5">
-            <h2>Typescript</h2>
-            <ul>
-                <li class="fragment">entwickelt von Microsoft</li>
-                <li class="fragment">Superset über JavaScript, welches zu ES3 (optional ES5) transpiliert</li>
-                <li class="fragment">Statische Typisierung</li>
-                <li class="fragment">Interfaces</li>
-            </ul>
-        </section>
-
-        <!-- New Slide -->
-        <section data-background-color="#D9EAF5">
-            <h2>NodeJs</h2>
-            <ul>
-                <li class="fragment">JavaScript-Laufzeitumgebung für Server-Anwendungen</li>
-                <li class="fragment">Open Source, cross-plattform</li>
-                <li class="fragment">veröffentlicht 2009 von Ryan Dahl</li>
-                <li class="fragment">benutzt JavaScript-Enginge V8 von Google Chrome</li>
-                <li class="fragment">Anwendungen auch in CoffeeScript, Dart oder TypeScript möglich</li>
-                <li class="fragment">wird u.a. eingesetzt von: IBM, LinkedIn, Microsoft, Netflix, PayPal, SAP, Yahoo, Cisco, ...</li>
-                <li class="fragment">Paketmanager zum Installieren und Verwalten von Modulen</li>
-                <li class="fragment">schreiben eigener Module möglich</li>
-            </ul>
-        </section>
-
-        <!-- New Slide -->
-        <section data-background-color="#D9EAF5">
-            <h2>NodeJs</h2>
-            <ul>
-                <li class="fragment">arbeitet standardmäßig mit nur einem Thread</li>
-                <li class="fragment">mit libuv kann zusätzlich Thread-Pool vorgehalten werden</li>
-                <li class="fragment">event-driven-Architektur erlaubt auch ohne Threading hochskalierbare Web Server</li>
-                <li class="fragment">asynchroner I/O</li>
-                <li class="fragment">Funktionen laufen nicht-blockierend (parallel) ab; Callbacks signalisieren, wenn sie fertig oder fehlgeschlagen sind</li>
-            </ul>
         </section>
     </div>
 </div>

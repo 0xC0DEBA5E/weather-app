@@ -6,7 +6,7 @@ var weatherApp = (function () {
             remote.getGlobal('cookies').get({name:'zipCode'}, (error, cookies) => {
                 if (error) {
                     console.log(error);
-                }else if (cookies){ // && cookies[0].value && cookies[0].value != ""
+                }else if (cookies && cookies[0].value && cookies[0].value != ""){ // && cookies[0].value && cookies[0].value != ""
                     window.$('#plz').val(cookies[0].value);
                 }
             })
