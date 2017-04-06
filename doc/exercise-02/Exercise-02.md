@@ -6,9 +6,27 @@
 - Locales -> Benjamin
 - GlobalShortcut+Accelerator -> Philipp
 
-## Cookies
+## Cookies and Session
 
-## Session
+Electron allows the access to browser sessions, cookies, proxy settings etc. via the `session` module. The current session can be accessed by: `window.webContents.session`.
+The default session of the application can be accessed by: 'Session.defaultSession'.
+This session can be used to call methods like 'getUserAgent', 'setProxy', 'setDownloadPath'.
+
+Cookies can be accessed by `Session.cookies`
+
+'Cookies.get(filter, callback);'
+
+The 'filter' is a JSON object consisting of the following properties: 'url', `name`, `domain`, `path`, `secure`, `session`.
+
+In this case 'session' allows the differentiation between session and persistent cookies.
+The callback possibly consists of 'error's  and an array of 'cookie' objects, which can be used to read a 'name' and a 'value'.
+To set a cookie 'Cookies.set(details, callback)' is used.
+The 'detail' object can consist of the following properties:
+'url' (mandatory), 'name', 'value', 'domain', 'path', 'secure', 'httpOnly', 'expirationDate'
+
+The 'expirationDate' property allows to set the cookie either as a session cookie (by omitting parameters) or as a persistent cookie (the parameter is a UNIX timestamp).
+The 'Callback' consists of possible errors.
+
 
 ## Dialog
 With the dialog module it is possible to display native system dialogs for opening files, saving files and several kinds of messageboxes. dialog is opened from electron's main process, to use a dialog object in a renderer process, you have to use it with remote.
