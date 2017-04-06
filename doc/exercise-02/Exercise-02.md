@@ -25,7 +25,7 @@ The `detail` object can consist of the following properties:
 `url` (mandatory), `name`, `value`, `domain`, `path`, `secure`, `httpOnly`, `expirationDate`
 
 The `expirationDate` property allows to set the cookie either as a session cookie (by omitting parameters) or as a persistent cookie (the parameter is a UNIX timestamp).
-The `Callback` consists of possible errors.`
+The `Callback` consists of possible `error`s.
 
 
 ## Dialog
