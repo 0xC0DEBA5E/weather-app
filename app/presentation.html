@@ -63,27 +63,26 @@ remote.getGlobal('cookies').get({name:'zipCode'}, (error, cookies) => {
 				<li>Anzeigen von MessageBoxes möglich</li>
 			</ul>
             <pre class="javascript fragment"><code data-trim>
-	dialog.showMessageBox( {
-					type: "info",
-                    message: "Willkommen!",
-                    buttons: ["OK"]
-                })
-}</code></pre>
+dialog.showMessageBox({
+                         type: "info",
+                         message: "Willkommen!",
+                         buttons: ["OK"]
+                     });
+</code></pre>
         </section>
 
 		        <!-- New Slide -->
         <section data-background-color="#D9EAF5">
             <h2>Dialog (II)</h2>
-            <pre class="javascript fragment"><code data-trim>
-dialog.showSaveDialog( {
-	filters: [
-		{ name: 'Images', extensions: ['jpg', 'png', 'gif'] },
-		{ name: 'Movies', extensions: ['mkv', 'avi', 'mp4'] },
-		{ name: 'Custom File Type', extensions: ['as'] },
-		{ name: 'All Files', extensions: ['*'] }
-	]}
-)                })
-}</code></pre>
+            <pre class="javascript fragment"><code>
+dialog.showSaveDialog({
+    filters: [
+        {
+            name: 'Images',
+            extensions: ['jpg', 'png', 'gif']
+        }
+    ]});
+</code></pre>
         </section>
 
         <!-- New Slide -->
