@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Future Karlsruhe - A CITY WHERE NO ONE DRIVES</title>
+    <script>var reveal = require('reveal.js')</script>
+
+    <link rel="stylesheet" href="../node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../node_modules/reveal.js/css/theme/white.css">
+    <style>
+        .alignLeft {
+            text-align: left;
+        }
+    </style>
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        //link.href = '../node_modules/reveal.js/css/print/pdf.css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '../node_modules/reveal.js/css/print/pdf.css' : '../node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+
+        <!-- New Slide -->
+        <section>
+            <h2 >Future Karlsruhe - A city where no one drives</h2>
+            Autonomous Driving in allen Bereichen:
+            <ul>
+                <li>(Personentransport)</li>
+                <li>Nahrungslieferung</li>
+                <li>Post</li>
+                <li>Müllentsorgung</li>
+                <li>...</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<script>
+    reveal.initialize();
+</script>
+</body>
+</html>
