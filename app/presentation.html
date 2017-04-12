@@ -58,14 +58,31 @@ remote.getGlobal('cookies').get({name:'zipCode'}, (error, cookies) => {
         <!-- New Slide -->
         <section data-background-color="#D9EAF5">
             <h2>Dialog</h2>
+			<ul>
+				<li>erlaubt Verwendung nativer Dialoge für Datei öffnen/speichern</li>
+				<li>Anzeigen von MessageBoxes möglich</li>
+			</ul>
             <pre class="javascript fragment"><code data-trim>
-function showWelcomeMessage() {
-	dialog.showMessageBox(
-                {
-                    type: "info",
+	dialog.showMessageBox( {
+					type: "info",
                     message: "Willkommen!",
                     buttons: ["OK"]
-                });
+                })
+}</code></pre>
+        </section>
+
+		        <!-- New Slide -->
+        <section data-background-color="#D9EAF5">
+            <h2>Dialog (II)</h2>
+            <pre class="javascript fragment"><code data-trim>
+dialog.showSaveDialog( {
+	filters: [
+		{ name: 'Images', extensions: ['jpg', 'png', 'gif'] },
+		{ name: 'Movies', extensions: ['mkv', 'avi', 'mp4'] },
+		{ name: 'Custom File Type', extensions: ['as'] },
+		{ name: 'All Files', extensions: ['*'] }
+	]}
+)                })
 }</code></pre>
         </section>
 
