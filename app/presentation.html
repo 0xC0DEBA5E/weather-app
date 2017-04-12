@@ -11,6 +11,9 @@
         * {
             color: #ff8c00;
         }
+        .alignLeft {
+            text-align: left;
+        }
     </style>
     <script>
         var link = document.createElement('link');
@@ -86,8 +89,10 @@ dialog.showSaveDialog( {
         <!-- New Slide -->
         <section data-background-color="#D9EAF5">
             <h2>Locales</h2>
-            Spracheinstellung und Einstellung von Nummern- Währungs- und Datumsformat.
-            Beispiele:
+            <p class="alignLeft">
+                Spracheinstellung und Einstellung von Nummern- Währungs- und Datumsformat.
+                <br/>Beispiele:
+            </p>
             <ul>
                 <li>de</li>
                 <li>de-DE</li>
@@ -101,11 +106,17 @@ app.getLocale()</code></pre>
         <!-- New Slide -->
         <section data-background-color="#D9EAF5">
             <h2>Accelerators and Global Shortcuts</h2>
+            <p class="alignLeft">
+                Festlegung der Tastenkombinationen über Accelerators (Modifier+KeyCode)
+            </p>
             <pre class="javascript fragment">
                 <code data-trim>
+const {app, globalShortcut} = require('electron')
+
 globalShortcut.register('CommandOrControl+X', () => {
         app.quit();
-    });</code>
+});
+                </code>
             </pre>
         </section>
     </div>
