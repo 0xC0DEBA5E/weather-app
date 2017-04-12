@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="../node_modules/reveal.js/css/reveal.css">
     <link rel="stylesheet" href="../node_modules/reveal.js/css/theme/white.css">
     <style>
+        .slides section h1, .slides section h2 {
+            color: #e30613
+        }
+
         .alignLeft {
             text-align: left;
         }
@@ -27,15 +31,65 @@
     <div class="slides">
 
         <!-- New Slide -->
-        <section>
-            <h2 >Future Karlsruhe - A city where no one drives</h2>
-            Autonomous Driving in allen Bereichen:
+        <section data-background-color="#EFEFEF">
+            <h1 >Future Karlsruhe - A city where no one drives</h1>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#EFEFEF">
+            <h2>Autonomous Driving in allen Bereichen</h2>
             <ul>
-                <li>(Personentransport)</li>
-                <li>Nahrungslieferung</li>
-                <li>Post</li>
-                <li>Müllentsorgung</li>
-                <li>...</li>
+                <li class="fragment">Personentransport</li>
+                <li class="fragment">Lebensmittellieferung</li>
+                <li class="fragment">Post</li>
+                <li class="fragment">Müllentsorgung</li>
+                <li class="fragment">...</li>
+            </ul>
+            <p class="fragment">Und/oder mit dem Einsatz von Drohnen</p>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#EFEFEF">
+            <h2>Drahtloser Internet-/Stromzugang überall</h2>
+            <ul>
+                <li class="fragment">über Induktion</li>
+                <li class="fragment">Access Points in Straßenlaternen</li>
+            </ul>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#EFEFEF">
+            <h2>Optimierte Serviceprodukt-Organisation</h2>
+            <ul>
+                <li class="fragment">Nachlieferung fehlender Teile per Drohne</li>
+                <li class="fragment">Vollautomatisierte ausrüstung des Technikerfahrzeugs</li>
+                <li class="fragment">Unterstützunng des Technikers durch VR-Brille</li>
+            </ul>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#EFEFEF">
+            <h2>Die Architektur</h2>
+            Besteht im Wesentlichen aus Views:
+            <ul>
+                <li class="fragment">AssignmentScheduleView</li>
+                <li class="fragment">ServiceOrderView</li>
+                <li class="fragment">OrderPartsView</li>
+                <li class="fragment">CompleteOrderView</li>
+                <li class="fragment">...</li>
+            </ul>
+        </section>
+
+        <section data-background-color="#EFEFEF">
+            <h2>Electron Modules</h2>
+            <p>
+                Verwendet werden die nur die nötigsten electron modules für eine höhere Portabilität. <br/>Bspw.:
+            </p>
+            <ul>
+                <li class="fragment">app</li>
+                <li class="fragment">BrowserWindow</li>
+                <li class="fragment">globaleShortcut</li>
+                <li class="fragment">...</li>
             </ul>
         </section>
     </div>
