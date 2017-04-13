@@ -43,16 +43,47 @@
 
         <!-- New Slide -->
         <section data-background-color="#D9EAF5">
-            <h2>Session & Cookies</h2>
-            <pre class="javascript fragment"><code data-trim>
-remote.getGlobal('cookies').get({name:'zipCode'}, (error, cookies) => {
-                if (error) {
-                    console.log(error);
-                } else if (cookies && cookies[0].value
-                    && cookies[0].value != "") {
-                    window.$('#plz').val(cookies[0].value);
-                }
-            })</code></pre>
+            <h2>Session</h2>
+            <ul>
+                <li>Zugriff auf Browsersessions, Cookies Cache, Proxy-Einstellungen etc.</li>
+                <li>Auf Session aufrufen: getUserAgent, setProxy,  setDownloadPath,...</li>
+            </ul>
+            <pre class="javascript fragment"><code data-trim>var currentSession = window.webContents.session;
+var defaultSession = Session.defaultSession;</code></pre>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#D9EAF5">
+            <h2>Cookies I</h2>
+            <pre class="javascript fragment"><code data-trim>//get cookies
+let filter = {name: 'zipCode'};
+let callback = (error, cookies) => {
+    if (error) {
+        console.log(error);
+    } else if (cookies && cookies[0].value) {
+        window.$('#plz').val(cookies[0].value);
+    }
+};
+currentSession.cookies.get(filter, callback);</code></pre>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#D9EAF5">
+            <h2>Cookies II</h2>
+            <pre class="javascript fragment"><code data-trim>//set Cookies
+let details = {
+    url: myUrl,
+    name: 'zipCode',
+    value: zipCode,
+    session: false,
+    expirationDate: 1504992723000
+};
+let callback = (error) => {
+    if (error) {
+        console.log(error);
+    }
+});
+currentSession.cookies.set(details, callback);</code></pre>
         </section>
 
         <!-- New Slide -->
