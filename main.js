@@ -40,14 +40,16 @@ function readCookies() {
     global.cookies = win.webContents.session.cookies;
 }
 
+/*
 function showWelcomeMessage() {
 	dialog.showMessageBox( { type: "info", message: "Willkommen!", buttons: ["OK"] });
 }
+*/
 
 app.on('ready', createWindow)
 app.on('ready', readCookies)
 app.on('ready', defineGlobalShortcuts)
-app.on('ready', showWelcomeMessage)
+//app.on('ready', showWelcomeMessage)
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
