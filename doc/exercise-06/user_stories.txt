@@ -1,0 +1,18 @@
+Features:
+
+- Auftragsbeschreibung: (Sebastian)
+	- automatische Analyse
+	- Produktbeschreibung
+	- Kommentare
+	- Auftrag zurückstellen
+	- Auftrag abschließen
+
+- Backlog (Philipp)
+
+- Produkthistorie (Philipp)
+
+- Chat (!)
+
+- Handbuch (!) 
+
+- Karte (Jens)
