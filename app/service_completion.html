@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Future Karlsruhe - A CITY WHERE NO ONE DRIVES</title>
+    <script>var reveal = require('reveal.js')</script>
+
+    <link rel="stylesheet" href="../node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../node_modules/reveal.js/css/theme/white.css">
+    <style>
+        .slides section h1, .slides section h2 {
+            color: #e30613
+        }
+
+        .alignLeft {
+            text-align: left;
+        }
+    </style>
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        //link.href = '../node_modules/reveal.js/css/print/pdf.css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '../node_modules/reveal.js/css/print/pdf.css' : '../node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+
+        <!-- New Slide -->
+        <section data-background-color="#EFEFEF">
+            <h1 >Future Karlsruhe - Call it Skynet if you wish</h1>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#EFEFEF">
+            <h2>User Stories</h2>
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#EFEFEF">
+            <h2>Service Completion</h2>
+            <!-- left align? -->
+            Als Techniker<br/>möchte ich einen Auftrag abschließen,<br/>um erbrachte Arbeit nachzuweisen und mit dem nächsten Auftrag fortzufahren.
+        </section>
+
+        <!-- New Slide -->
+        <section data-background-color="#EFEFEF">
+            <h2>Selection Completion</h2>
+            <!-- left align? -->
+            Akzeptanzkriterien:
+            <ul>
+                <li class="fragment">die bearbeitete Service Order wird angezeigt (ID)</li>
+                <li class="fragment">der aktuelle Zeitstempel wird angezeigt</li>
+                <li class="fragment">ich kann die tatsächlich benötigte Zeit angeben, falls diese von der geplanten Zeit abweicht</li>
+                <li class="fragment">ich kann die tatsächlich benötigten Teile angeben, falls diese von den geplanten Teilen abweichen</li>
+                <li class="fragment">ich kann zusätzliche Anmerkungen angeben, um z.B. die längere Dauer zu begründen</li>
+                <li class="fragment">ich kann den Kunden unterschreiben lassen</li>
+            </ul>
+        </section>
+
+    </div>
+</div>
+<script>
+    reveal.initialize();
+</script>
+</body>
+</html>
